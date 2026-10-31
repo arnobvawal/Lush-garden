@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
+    <title>Lush Garden.Plant shop</title>
+    <style>
+      nav a {
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      nav a:hover {
+        color: #d1d5db;
+      }
+
+      nav a.active,
+      nav a:focus-visible,
+      nav a:focus {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+        color: #ffffff;
+        outline: none;
+      }
+
+      .btn-base {
+        height: 41px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+        text-decoration: none;
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .btn-book {
+        background-color: #285a43;
+        color: white;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .btn-video {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        gap: 10px;
+        padding: 0 24px;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      .btn-video:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      @media (min-width: 640px) {
+        .btn-base {
+          width: 168px;
+        }
+      }
+
+      .btn-book:hover .shimmer {
+        left: 125% !important;
+      }
+
+      .btn-book:hover .corner-tr,
+      .btn-book:hover .corner-bl {
+        height: 90% !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#fefefe]">
+    <div
+      class="fixed top-0 z-50 flex w-full flex-col items-center justify-between md:flex-row p-4 md:p-6 bg-black/60 md:bg-black/20 backdrop-blur-sm gap-4 md:gap-0"
+    >
+      <div>
+        <img src="./images/Mask group.svg" alt="logo" class="w-28 md:w-32" />
+      </div>
+
+      <nav class="w-full md:w-auto">
+        <ul
+          class="flex flex-wrap items-center justify-center md:justify-end gap-3 sm:gap-4 md:gap-6 text-sm md:text-base"
+        >
+          <li class="text-white hover:text-gray-200">
+            <a
+              href="#home"
+              class="nav-link underline-offset-4 transition-colors focus-visible:outline-none"
+              >Home</a
+            >
+          </li>
+          <li class="text-white hover:text-gray-200">
+            <a
+              href="#about"
+              class="nav-link underline-offset-4 transition-colors focus-visible:outline-none"
+              >About us</a
+            >
+          </li>
+          <li class="text-white hover:text-gray-200">
+            <a
+              href="#planters"
+              class="nav-link underline-offset-4 transition-colors focus-visible:outline-none"
+              >Planters</a
+            >
+          </li>
+          <li class="text-white hover:text-gray-200">
+            <a
+              href="#contact"
+              class="nav-link underline-offset-4 transition-colors focus-visible:outline-none"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <button
+              class="group relative rounded-2xl border-b-4 md:border-b-8 border-gray-300 bg-white px-4 py-2 md:px-8 md:py-4 text-[10px] md:text-xs font-bold uppercase tracking-wider text-gray-700 shadow-[0_15px_25px_-10px_rgba(255,255,255,0.7)] transition-all duration-100 active:translate-y-1 md:active:translate-y-2 active:border-b-0 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            >
+              <a href="#call_us"></a>
+              <span
+                class="pointer-events-none absolute inset-0 h-full w-full rounded-2xl bg-linear-to-t from-black/5 to-transparent"
+              ></span>
+              <span
+                class="pointer-events-none absolute left-3 top-2 h-3 w-6 rounded-full bg-gray-200/60 blur-[2px]"
+              ></span>
+              <span
+                class="relative flex items-center justify-center gap-1 md:gap-2 drop-shadow-md"
+              >
+                <svg
+                  class="h-4 w-4 md:h-6 md:w-6 animate-pulse"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+                Call us
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="pt-28 md:pt-0">
+      <section
+        id="home"
+        class="overflow-hidden"
+        style="
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 720px;
+          text-align: center;
+          padding: 0 24px;
+        "
+      >
+        <img
+          src="./images/image 1.jpg"
+          alt="background"
+          style="
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 0;
+          "
+        />
+        <div
+          style="
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+          "
+        ></div>
+
+        <div
+          style="
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 896px;
+            margin: 0 auto;
+            font-family: &quot;Barlow&quot;, sans-serif;
+          "
+        >
+          <h1
+            style="
+              font-size: 2.5rem;
+              font-weight: bold;
+              color: white;
+              margin: 0;
+              text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            "
+          >
+            Beauty delivered to You
+          </h1>
+          <p
+            style="
+              margin-top: 20px;
+              font-size: 1rem;
+              color: white;
+              max-width: 650px;
+              line-height: 1.6;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            "
+          >
+            Nature's beauty is just a click away with our online flower and
+            plant shop. We offer a wide variety of flowers that will bring a
+            touch of nature to your home!
+          </p>
+
+          <div
+            style="
+              margin-top: 32px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 16px;
+              justify-content: center;
+              width: 100%;
+            "
+          >
+            <button class="btn-base btn-book">
+              <span style="position: relative; z-index: 20">Book Now</span>
+
+              <span
+                class="shimmer"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: -75%;
+                  width: 50%;
+                  height: 100%;
+                  background-color: rgba(255, 255, 255, 0.2);
+                  transform: rotate(12deg);
+                  z-index: 10;
+                  filter: blur(8px);
+                  transition: all 1s ease-in-out;
+                "
+              ></span>
+
+              <span
+                style="
+                  position: absolute;
+                  border-top-left-radius: 3px;
+                  height: 20%;
+                  width: 50%;
+                  border-left: 2px solid #d4edf9;
+                  border-top: 2px solid #d4edf9;
+                  top: 0;
+                  left: 0;
+                  transition: all 0.3s;
+                  z-index: 10;
+                "
+              ></span>
+              <span
+                class="corner-tr"
+                style="
+                  position: absolute;
+                  border-top-right-radius: 3px;
+                  height: 60%;
+                  width: 50%;
+                  border-right: 2px solid #d4edf9;
+                  border-top: 2px solid #d4edf9;
+                  top: 0;
+                  right: 0;
+                  transition: all 0.3s;
+                  z-index: 10;
+                "
+              ></span>
+              <span
+                class="corner-bl"
+                style="
+                  position: absolute;
+                  border-bottom-left-radius: 3px;
+                  height: 60%;
+                  width: 50%;
+                  border-left: 2px solid #d4edf9;
+                  border-bottom: 2px solid #d4edf9;
+                  left: 0;
+                  bottom: 0;
+                  transition: all 0.3s;
+                  z-index: 10;
+                "
+              ></span>
+              <span
+                style="
+                  position: absolute;
+                  border-bottom-right-radius: 3px;
+                  height: 20%;
+                  width: 50%;
+                  border-right: 2px solid #d4edf9;
+                  border-bottom: 2px solid #d4edf9;
+                  right: 0;
+                  bottom: 0;
+                  transition: all 0.3s;
+                  z-index: 10;
+                "
+              ></span>
+            </button>
+
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              class="btn-base btn-video"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://w3.org"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                style="width: 16px; height: 16px; flex-shrink: 0"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+                />
+              </svg>
+              <span>Watch Video</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="flex flex-col items-center justify-center w-full min-h-100 gap-8 md:gap-12 px-4 sm:px-6 py-12 md:py-16"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 max-w-6xl w-full"
+        >
+          <h1
+            class="text-green-800 font-bold text-2xl sm:text-3xl md:text-4xl leading-[1.1] max-w-119 w-full text-center md:text-left"
+          >
+            We Help Choose the Most Suitable Plants for You
+          </h1>
+          <p
+            class="text-gray-600 text-sm sm:text-base max-w-162 w-full text-center md:text-left"
+          >
+            Our selection includes a wide variety of flowers, from classic roses
+            to exotic orchids, as well as a variety of lush indoor and outdoor
+            plants. We also offer unique floral arrangements that are perfect
+            for any occasion, whether you're looking to brighten up your home or
+            send a thoughtful gift.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-10 max-w-6xl w-full p-4 sm:p-6 md:p-10 bg-[#fefefe] rounded-lg"
+        >
+          <div
+            class="bg-[#ffffff] w-full max-w-87.5 p-5 rounded-lg shadow-sm flex flex-col gap-4 group"
+          >
+            <img
+              src="./images/card part.png"
+              alt="Indoor plants display"
+              class="w-full h-auto object-cover rounded-md"
+            />
+            <h2 class="text-[#285A43] text-xl font-bold tracking-tight">
+              Indoor Plants
+            </h2>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Bring a touch of greenery to your living spaces with our
+              collection of indoor plants, perfect for purifying the air and
+              adding a natural touch to your home.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#337A5B] w-full max-w-87.5 p-5 rounded-lg shadow-sm flex flex-col gap-4 group"
+          >
+            <img
+              src="./images/card part(2).png"
+              alt="Outdoor plants display"
+              class="w-full h-auto object-cover rounded-md"
+            />
+            <h2 class="text-[#ffffff] text-xl font-bold tracking-tight">
+              Outdoor Plants
+            </h2>
+            <p class="text-sm text-[#ffffff] leading-relaxed">
+              Bring the beauty of nature to your outdoor spaces with our wide
+              selection of outdoor plants.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#ffffff] w-full max-w-87.5 p-5 rounded-lg shadow-sm flex flex-col gap-4 group"
+          >
+            <img
+              src="./images/card part(3).png"
+              alt="Custom arrangements display"
+              class="w-full h-auto object-cover rounded-md"
+            />
+            <h2 class="text-[#285A43] text-xl font-bold tracking-tight">
+              Plants Pots
+            </h2>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Add a touch of style to your indoor or outdoor spaces with our
+              collection of pots plants, available in a variety of sizes and
+              designs to fit any decor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="planters" class="w-full px-4 py-16 sm:px-6 md:py-20">
+        <div class="mx-auto max-w-6xl">
+          <div
+            class="flex items-center justify-center mb-8 text-center md:text-left"
+          >
+            <h1
+              class="text-3xl font-bold text-[#285A43] sm:text-4xl md:text-5xl lg:text-6xl"
+            >
+              What We Offer To You
+            </h1>
+          </div>
+          <div class="flex flex-wrap">
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(1).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(2).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(3).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(4).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(5).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(6).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(7).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+            <div
+              class="relative w-full max-w-70 flex flex-col bg-[#ffffff] overflow-hidden rounded-lg shadow"
+            >
+              <button
+                class="green-heart-btn absolute top-5 right-5 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none z-10"
+                aria-label="Favorite"
+              >
+                <svg
+                  class="heart-outline h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+
+                <svg
+                  class="heart-solid hidden h-5 w-5 text-[#285A43]"
+                  xmlns="http://w3.org"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                  />
+                </svg>
+              </button>
+
+              <div class="w-full aspect-square">
+                <img
+                  src="./images/plant(8).jpg"
+                  alt="cactus plant"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="p-4 flex flex-row items-center justify-between w-full"
+              >
+                <div>
+                  <h4 class="font-semibold text-emerald-800 text-lg">
+                    Cactus Plant
+                  </h4>
+                  <p class="text-sm mt-0.5">
+                    <span class="line-through text-gray-400">($10)</span>
+                    <strong class="text-emerald-800 ml-1">$8</strong>
+                  </p>
+                </div>
+                <button
+                  class="bg-white border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-medium py-2 px-5 rounded-md transition-colors"
+                >
+                  <span class="text-sm">Buy Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-32"></div>
+
+        <div class="flex flex-col lg:flex-row w-full">
+          <div class="w-full lg:w-1/2 shrink-0">
+            <img
+              src="./images/image 2.jpg"
+              alt="Featured Flowers"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-0">
+            <div
+              class="bg-white p-10 md:p-16 flex flex-col justify-center items-start"
+            >
+              <img
+                src="./images/element(1).png"
+                alt="element"
+                class="h-31.5 w-31.5 object-contain mb-6"
+              />
+              <h3 class="text-xl font-bold mb-3">Quality Product</h3>
+              <p class="text-sm font-medium leading-relaxed max-w-xs">
+                Our flowers are of the highest quality, carefully selected and
+                sourced from reputable
+              </p>
+            </div>
+
+            <div
+              class="bg-[#f9f9f9] p-10 md:p-16 flex flex-col justify-center items-start"
+            >
+              <img
+                src="./images/element(2).png"
+                alt="element"
+                class="h-31.5 w-31.5 object-contain mb-6"
+              />
+              <h3 class="text-xl font-bold mb-3">Always Fresh</h3>
+              <p class="text-sm font-medium leading-relaxed max-w-xs">
+                Our flowers are always fresh, handpicked and delivered promptly
+                for maximum longevity and enjoyment.
+              </p>
+            </div>
+
+            <div
+              class="bg-[#f9f9f9] p-10 md:p-16 flex flex-col justify-center items-start"
+            >
+              <img
+                src="./images/element(3).png"
+                alt="element"
+                class="h-31.5 w-31.5 object-contain mb-6"
+              />
+              <h3 class="text-xl font-bold mb-3">Work Smart</h3>
+              <p class="text-sm font-medium leading-relaxed max-w-xs">
+                We work smart, using innovative techniques and technology to
+                streamline our processes
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-10 md:p-16 flex flex-col justify-center items-start"
+            >
+              <img
+                src="./images/element(4).png"
+                alt="element"
+                class="h-31.5 w-31.5 object-contain mb-6"
+              />
+              <h3 class="text-xl font-bold mb-3">Excellent Service</h3>
+              <p class="text-sm font-medium leading-relaxed max-w-xs">
+                We pride ourselves on providing excellent service, going above
+                and beyond to meet our customers' needs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full h-32"></div>
+
+        <div>
+          <div class="flex justify-center">
+            <h2 class="text-3xl font-bold">Our Gallery View</h2>
+          </div>
+
+          <div class="w-full h-8.75"></div>
+
+          <div class="flex space-x-2.5">
+            <div>
+              <img
+                src="./images/gallery pic(1).jpg"
+                alt="Gallery Image 1"
+                class="w-125 h-165 object-cover mb-4"
+              />
+            </div>
+            <div class="space-y-2.5">
+              <img
+                src="./images/gallery pic(2).jpg"
+                alt="Gallery Image 2"
+                class="w-114.75 h-81.25 object-cover mb-4"
+              />
+
+              <img
+                src="./images/gallery pic(3).jpg"
+                alt="Gallery Image 3"
+                class="w-114.75 h-81.25 object-cover mb-4"
+              />
+            </div>
+            <div>
+              <img
+                src="./images/gallery pic(4).jpg"
+                alt="Gallery Image 4"
+                class="w-114.75 h-81.25 object-cover mb-4"
+              />
+
+              <img
+                src="./images/gallery pic(5).jpg"
+                alt="Gallery Image 5"
+                class="w-114.75 h-81.25 object-cover mb-4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-center">
+            <h2 class="font-bold text-2xl md:text-3xl text-center">
+              What Do They Say About Us
+            </h2>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-8 md:gap-16 mt-8 md:mt-12"
+          >
+            <div class="relative w-[360px] h-[329px] shrink-0 mx-auto sm:mx-0">
+              <img
+                src="./images/comment_bg(1).jpg"
+                alt="background"
+                class="w-full h-full object-fill"
+              />
+              <div
+                class="absolute top-0 left-0 w-[280px] h-full p-8 flex flex-col justify-start z-10"
+              >
+                <div class="flex gap-4 items-center mb-6">
+                  <img
+                    src="./images/avatar(1).png"
+                    alt="Doris Watson"
+                    class="w-16 h-16 rounded-full shrink-0"
+                  />
+                  <h3 class="font-black text-xl truncate">Doris Watson</h3>
+                </div>
+                <p class="text-sm leading-relaxed text-left break-words">
+                  “ Highly recommend this website for quality flowers and
+                  plants. Great prices, timely delivery and excellent customer
+                  service. ”
+                </p>
+              </div>
+            </div>
+
+            <div class="relative w-[360px] h-[329px] shrink-0 mx-auto sm:mx-0">
+              <img
+                src="./images/comment_bg(2).jpg"
+                alt="background"
+                class="w-full h-full object-fill"
+              />
+              <div
+                class="absolute top-0 left-0 w-[280px] h-full p-8 flex flex-col justify-start z-10"
+              >
+                <div class="flex gap-4 items-center mb-6">
+                  <img
+                    src="./images/avatar(2).png"
+                    alt="Kate Szu"
+                    class="w-16 h-16 rounded-full shrink-0"
+                  />
+                  <h3 class="font-black text-xl truncate">Kate Szu</h3>
+                </div>
+                <p class="text-sm leading-relaxed text-left break-words">
+                  “ Great service, beautiful flowers, timely delivery. Highly
+                  recommend. ”
+                </p>
+              </div>
+            </div>
+
+            <div class="relative w-[360px] h-[329px] shrink-0 mx-auto sm:mx-0">
+              <img
+                src="./images/comment_bg(3).jpg"
+                alt="background"
+                class="w-full h-full object-fill"
+              />
+              <div
+                class="absolute top-0 left-0 w-[280px] h-full p-8 flex flex-col justify-start z-10"
+              >
+                <div class="flex gap-4 items-center mb-6">
+                  <img
+                    src="./images/avatar(3).png"
+                    alt="Dyness"
+                    class="w-16 h-16 rounded-full shrink-0"
+                  />
+                  <h3 class="font-black text-xl truncate">Dyness</h3>
+                </div>
+                <p class="text-sm leading-relaxed text-left break-words">
+                  “ I am very happy with my purchase from this website, the
+                  plants were healthy and arrived on time. ”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="w-full px-4">
+        <div class="relative w-full h-[24rem] md:h-[28rem]">
+          <img
+            src="./images/mail_bg.jpg"
+            alt="background"
+            class="w-full h-full object-cover"
+          />
+
+          <div
+            class="absolute inset-0 bg-black/40 px-6 py-8 md:px-16 flex items-center"
+          >
+            <div
+              class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            >
+              <div class="max-w-xl">
+                <h2
+                  class="text-xl sm:text-2xl md:text-3xl font-semibold text-white leading-snug tracking-wide"
+                >
+                  Enter Your Email Address For Our Mailing Promo Or Other
+                  Interesting Things
+                </h2>
+              </div>
+
+              <div class="w-full max-w-xl lg:max-w-none">
+                <form
+                  id="email-submission-form"
+                  class="flex flex-col sm:flex-row gap-4 w-full"
+                >
+                  <!-- Input Field -->
+                  <div class="relative flex-1">
+                    <label for="user_email" class="sr-only"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="user_email"
+                      name="user_email"
+                      placeholder="Enter your email"
+                      required
+                      class="w-full rounded-md border border-white/50 bg-black/20 px-4 py-3 text-white placeholder-white/50 outline-none focus:border-white text-sm md:text-base"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full sm:w-auto bg-[#2d5a44] hover:bg-[#234735] text-white px-8 py-3 rounded-md font-medium transition-colors duration-200 text-sm md:text-base whitespace-nowrap"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+            <div>
+                <h2 class="text-9xl">
+                    An interresting blog to read
+                </h2>
+            </div>
+        </div>
+      </section>
+
+      <!-- <section id="call_us"> -->
+      <!-- <div> -->
+      <!-- ctrl+/ -->
+      <!-- </div> -->
+      <!-- </section> -->
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
